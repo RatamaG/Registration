@@ -8,17 +8,19 @@ import (
 )
 
 type Member struct {
+
 	Id    int     `json:"ID"`
 	Name  string  `json:"Name"`
 	Sname string  `json:"Second name"`
 	Note  string  `json:"Note"`
 	Hora  float32 `json:"The meeting time is"`
+
 }
 
 func member() {
 
 	m := Member{}
-
+  
 	
 	fmt.Println("Enter the list number of this member (starting at 0) ")
 	fmt.Scan(&m.Id)
@@ -26,10 +28,10 @@ func member() {
 	fmt.Println("Enter the name of the member ")
 	fmt.Scan(&m.Name)
 	
-	fmt.Println("Enter", m.Name, "last name")
+	fmt.Println("Enter", m.Name, "last name ")
 	fmt.Scan(&m.Sname)
 	
-	fmt.Println("Enter a note for this meeting")
+	fmt.Println("Enter a note for this meeting ")
 	fmt.Scan(&m.Note)
 	
 	fmt.Println("Enter meeting time with", m.Name, m.Sname)
@@ -38,7 +40,7 @@ func member() {
 
 	if m.Hora > 24 {
 
-		fmt.Println("Enter a hour valid with the format of 24 hours")
+		fmt.Println("Enter a hour valid with the format of 24 hours ")
 
 	} else {
 	
