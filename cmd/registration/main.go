@@ -34,7 +34,7 @@ func member() {
 	fmt.Println("Enter a note for this meeting ")
 	fmt.Scan(&m.Note)
 	
-	fmt.Println("Enter meeting time with", m.Name, m.Sname)
+	fmt.Println("Enter meeting time with ", m.Name, m.Sname)
 	fmt.Scan(&m.Hora)
 	
 
@@ -42,7 +42,9 @@ func member() {
 
 		fmt.Println("Enter a hour valid with the format of 24 hours ")
 
-	} else {
+		return
+
+	}
 	
 		
 		file_data, err := ioutil.ReadFile("./members.json")
@@ -70,9 +72,8 @@ func member() {
 		if error != nil {
 			log.Fatal(err)
 		}
-		
 	}
-}
+	
 func delete() {
 	var eliminar int
 
@@ -121,7 +122,7 @@ func main() {
 		fmt.Println("1. Create member")
 
 		fmt.Println("2. Delete member")
-
+ 
 		fmt.Println("3. List Members")
 
 		fmt.Println("4. exit")
